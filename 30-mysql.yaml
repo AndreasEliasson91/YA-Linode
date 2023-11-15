@@ -32,7 +32,7 @@ spec:
         - containerPort: 3306
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "Hejsan123"
+          value: "HelloThere"
         volumeMounts:
         - name: mysqldb
           mountPath: /var/lib/mysql
