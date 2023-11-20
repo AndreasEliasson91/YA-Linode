@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: yatest
   name: staticwebserver
   labels:
     app: staticwebserver
@@ -25,7 +26,8 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metadata:
+metadata: 
+  namespace: yatest
   name: staticwebserver-service
   annotations:
     service.beta.kubernetes.io/linode-loadbalancer-throttle: "4"
